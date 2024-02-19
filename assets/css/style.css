@@ -151,12 +151,9 @@ html{
     position: relative;
     margin-top: 46.5px;
     padding-top: 55%;
-<<<<<<< HEAD
     /* background-image: url('../img/sliders/slider1.jpg'); */
-=======
 
     background-image: url("/The-Duckie-Band/assets/img/Sliders/slider1.jpg");
->>>>>>> f10f90ce09fda4bc2ef6a8eee33a84c134bcbf46
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
