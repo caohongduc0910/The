@@ -7,6 +7,7 @@
     <title>The Duckie Band</title>
     <link rel="icon" href="assets/img/web_icon/icon4.png" type="image/x-icon" >
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/themify-icons/themify-icons.css">
 </head>
 
@@ -21,7 +22,7 @@
                 <li><a href="#Tour">Tour</a></li>
                 <li><a href="#Contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="nav-down-arrow ti-angle-down"></i>
                     </a>
@@ -37,11 +38,14 @@
             <div class="icon-nav">
                 <i class="colorWhite search-icon ti-search"></i>
             </div>
+            <div class="icon-nav-mobile">
+                <i class="colorWhite menu-icon ti-menu"></i>
+            </div>
         </div>
 
         <div class="slider">
             <div class="textCenter text-content">
-                <h2 class="text-heading">Vietnam</h2>
+                <h2 class="text-heading"></h2>
                 <p class="text">Thank you, Hanoi - A night we will never forget</p>
             </div>
         </div>
@@ -139,7 +143,9 @@
                         <ul class="backgroundWhite list-board">
                             <li class="list-items">September <span class="colorWhite ofo"> Sold out</span></li>
                             <li class="list-items">October <span class="colorWhite ofo"> Sold out</span></li>
-                            <li class="list-items none-border">November <span class="colorWhite textCenter left"> 3</span></li>
+                            <li class="list-items none-border">November 
+                                <span class="colorWhite textCenter left"> 3</span>
+                            </li>
                         </ul>
                     </div>
 
@@ -203,7 +209,7 @@
                             Phone: +1 968 280 831
                             <br>
                             <i class="ti-email"></i>
-                            Email: theduckieband2016@gmail.com
+                            Email: theduckieband@gmail.com
                         </p>
                     </div>
     
@@ -215,7 +221,7 @@
                                 <div class="clear-float"></div>
                             </div>
                             <div class="row p2">
-                                <input type="text" required placeholder="Message" id="contactMsg" class="col full-col user-info">
+                                <input type="text" required placeholder="Message" id="contactMsg" class="col user-info">
                                 <div class="clear-float"></div>
                             </div>
                             <div class="sbmit">
@@ -229,7 +235,7 @@
 
             <!-- End nd -->
             <div class="ending">
-                <img src="assets/img/end_content_img/end.jpg" alt="">
+                <img class="end-img" src="assets/img/end_content_img/end.jpg" alt="">
                 <p class="textCenter img-description">
                     Our very first concert in NYC ever!!!<br> Love y'all.
                 </p>
@@ -325,6 +331,59 @@
         modalBoard.addEventListener('click', function(event) {
             event.stopPropagation()
         })
+
+        const slider = document.querySelector('.slider')
+        const textHeading = document.querySelector('.slider .text-heading')
+        const text = document.querySelector('.slider .text')
+        slider.style.backgroundImage = "url('../assets/img/sliders/slider1.jpg')"
+        textHeading.textContent = "Vietnam"
+        text.textContent = "Thank you, Hanoi - A night we will never forget!"
+
+        const path = ['../assets/img/sliders/slider2.jpeg', 
+        '../assets/img/sliders/slider3.jpg',
+        '../assets/img/sliders/slider1.jpg']
+
+        const textHeader = ['Ho Chi Minh City', 'Da Nang', 'Ha Noi']
+        const content = ['The Xmas\'s atmosphere in HCMC is superb!',
+        'We had the best time playing at My Khe Beach!',
+        'Thank you, Hanoi - A night we will never forget!']
+
+        var idx = 0
+            setInterval(function() {
+            idx = idx % 3
+            // console.log(idx)
+            slider.style.backgroundImage = `url(${path[idx]})`
+            textHeading.textContent = textHeader[idx]
+            text.textContent = content[idx]
+            idx++ 
+        }, 3000)
+        // console.log(text_heading)
+
+        const header = document.querySelector('.header')
+        const mobileMenu = document.querySelector('.header .icon-nav-mobile')
+        const headerHeight = header.clientHeight
+
+        mobileMenu.onclick = function() {
+            let isClose = header.clientHeight === headerHeight
+            if(isClose) {
+                header.style.height = 'auto'
+            }else {
+                header.style.height = null // hoặc'46.5px'
+            }
+        }
+
+        const choices = document.querySelectorAll('.nav li a[href*="#"]')
+        for(var i = 0; i <choices.length; i++){
+            var choiceBtn = choices[i]
+            console.log(choiceBtn)
+            choiceBtn.onclick = function(){
+                header.style.height = null
+            }
+        }
+
+
+
+
     </script>
 </body>
 
