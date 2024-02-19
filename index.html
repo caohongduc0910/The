@@ -21,7 +21,7 @@
                 <li><a href="#Band">Band</a></li>
                 <li><a href="#Tour">Tour</a></li>
                 <li><a href="#Contact">Contact</a></li>
-                <li>
+                <li class = "lastBtn">
                     <a href="#">
                         More
                         <i class="nav-down-arrow ti-angle-down"></i>
@@ -58,21 +58,23 @@
                     THE DUCKIE BAND</h2>
                 <p class="textCenter content-subheader">
                     We love music</p>
-                <p class="text">
-                    "The Duckie Band" is a Canadian-American animal rock band formed in Toronto, Ontario, in 2016. It
-                    consists of 6 members: Buster - the Koala, Rosita and Gunter - the Pig, Johny - the Gorilla, Meena - the
-                    Elephant, Ash - the Porcupine. "The Duckie Band" combined elements of
-                    Americana, folk, rock, jazz, country, and R&B, influencing musicians such as George Harrison, Elton
-                    John, the Grateful Dead, Eric Clapton and Wilco.
-                </p>
-
-                <p class="text">
-                    Between 2000 and 2016, the group was known as "The Animalism", a backing band for rockabilly
-                    singer Ronnie Hawkins. In the 2000s, they gained recognition for backing Bob Dylan, and the 2014
-                    concert tour was notable as Dylan's first with an electric band. After leaving Dylan and changing
-                    their name to "The Duckie Band", they released several records to critical and popular acclaim,
-                    including their debut album Music from Big Pinkimal in 2015.
-                </p>
+                <div class="text-content-band">
+                    <p class="text">
+                        "The Duckie Band" is a Canadian - American animal rock band formed in Toronto, Ontario, in 2016. It
+                        consists of 6 members: Buster - the Koala, Rosita and Gunter - the Pigs, Johny - the Gorilla, Meena - the
+                        Elephant, Ash - the Porcupine. "The Duckie Band" combined elements of
+                        Americana, folk, rock, jazz, country, and R&B, influencing musicians such as George Harrison, Elton
+                        John, the Grateful Dead, Eric Clapton and Wilco.
+                    </p>
+    
+                    <p class="text">
+                        Between 2000 and 2016, the group was known as "The Animalism", a backing band for rockabilly
+                        singer Ronnie Hawkins. In the 2000s, they gained recognition for backing Bob Dylan, and the 2014
+                        concert tour was notable as Dylan's first with an electric band. After leaving Dylan and changing
+                        their name to "The Duckie Band", they released several records to critical and popular acclaim,
+                        including their debut album Music from Big Pinkimal in 2015.
+                    </p>
+                </div>
 
                 <!-- Members -->
                 <div class="member-list v1">
@@ -87,7 +89,7 @@
                     <div class="textCenter three-col col member-items">
                         <p class="member-name">Rosita</p>
                         <img src="assets/img/members/rosita.jpg" alt="Rosita" class="mem-img">
-                        <p class="member-bio">Along with a nice, superb voice, Rosita learns how to dance by just letting the
+                        <p class="member-bio">Along with a sweet voice, Rosita learns how to dance by just letting the
                             music
                             tell her body what to do.
                             She is also a skilled engineer, able to build, in just one night, multiple elaborate
@@ -96,7 +98,7 @@
                     <div class="textCenter three-col col member-items">
                         <p class="member-name">Johny</p>
                         <img src="assets/img/members/johny.jpg" alt="Johny" class="mem-img">
-                        <p class="member-bio">The son of a mobster, Johnny is expected to follow in his father's criminal
+                        <p class="member-bio">Son of a mobster, Johnny is expected to follow in his father's criminal
                             footsteps. However, his true passion - singing, which he initially didn't
                             admit to his father due to fear of his disapproval, was blooming and was
                             supported right immediately after meeting Buster.</p>
@@ -171,7 +173,7 @@
                                 <p class="place-description">Vancouver is one of the most ethnically and linguistically
                                     diverse cities in Canada. It has been consistently ranked one of the most livable
                                     cities in Canada and in the world.
-                                    Try not to miss the concert in this lovely city, give it a try, you won't regret.</p>
+                                    Try not to miss the concert in this lovely city, give it a try, you won't regret!</p>
                                 <button href="" class="colorWhite textCenter ticket-buybtn js-buybtn">Buy Now</button>
                             </div>
                         </div>
@@ -206,10 +208,10 @@
                             Toronto, Ontario, Canada
                             <br>
                             <i class="ti-mobile"></i>
-                            Phone: +1 968 280 831
+                            Phone: <a href="tel:+84 968 280 831">+84 968 280 831</a>
                             <br>
                             <i class="ti-email"></i>
-                            Email: theduckieband@gmail.com
+                            Email: <a href="mailto:theduckieband@gmail.com">theduckieband@gmail.com</a>
                         </p>
                     </div>
     
@@ -217,7 +219,7 @@
                         <form action="">
                             <div class="row p1">
                                 <input type="text" required placeholder="Name" id="contactName" class="col two-col user-info">
-                                <input type="text" required placeholder="Email / Phone Number" id="contactEmail" class="col two-col user-info">
+                                <input type="text" required placeholder="Email / Phone Number" id="contactEmail" class="col two-col user-info mt-8">
                                 <div class="clear-float"></div>
                             </div>
                             <div class="row p2">
@@ -235,7 +237,7 @@
 
             <!-- End nd -->
             <div class="ending">
-                <img class="end-img" src="assets/img/end_content_img/end.jpg" alt="">
+                <img class="end-img" src="./assets/img/end_content_img/end.jpg" alt="">
                 <p class="textCenter img-description">
                     Our very first concert in NYC ever!!!<br> Love y'all.
                 </p>
@@ -376,13 +378,30 @@
         for(var i = 0; i <choices.length; i++){
             var choiceBtn = choices[i]
             console.log(choiceBtn)
-            choiceBtn.onclick = function(){
-                header.style.height = null
+            choiceBtn.onclick = function(e){
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+                if(isParentMenu) {
+                    e.preventDefault()
+                }else {
+                    header.style.height = null
+                }
             }
         }
 
-
-
+        const navLastBtn = document.querySelector('.header .nav .lastBtn')
+        const openSubNav = document.querySelector('.nav .subnav')
+        let isNavOpened = false;
+        navLastBtn.onclick = function() {
+            if(isNavOpened){
+                openSubNav.style.position = 'absolute'
+                isNavOpened = false;
+            }
+            else{
+                openSubNav.style.position = 'relative'
+                isNavOpened = true;
+            }
+            console.log(isNavOpened)
+        }
 
     </script>
 </body>

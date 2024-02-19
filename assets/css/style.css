@@ -20,7 +20,7 @@ html{
 }
 
 .colorWhite{
-    color: white !important;
+    color: white ;
 }
 
 .textCenter{
@@ -94,7 +94,7 @@ html{
 
 .subnav li a{
     color: black;
-    padding: 0 12px;
+    padding: 2px 28px;
     line-height: 38px;
 }
 
@@ -153,7 +153,7 @@ html{
     padding-top: 55%;
     /* background-image: url('../img/sliders/slider1.jpg'); */
 
-    background-image: url("/The-Duckie-Band/assets/img/Sliders/slider1.jpg");
+    background-image: url("../assets/img/Sliders/slider1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -166,8 +166,10 @@ html{
     color: #ffffff;
     padding: 32px;
     left: 0;
+    text-shadow: 1px 1px 5px rgb(129, 19, 19);
+    background-color: rgb(21, 18, 18, 0.6);
     /* transform: translateX(-50%); */
-    /* width: 100%; */
+    width: 100%;
 }
 
 .slider .text-heading{
@@ -208,6 +210,10 @@ html{
     opacity: 0.7;
 }
 
+.content .text-content-band{
+    margin-bottom: 40px;
+}
+
 .content .text{
     margin: 15px 0;
     line-height: 1.4;
@@ -228,15 +234,15 @@ html{
     width: 30%;
     height: 530px;
     background-color: rgb(255 191 113);
-    border-radius: 30px;
+    /* border-radius: 30px; */
 }
 
 
-.content .member-items .member-bio{
+.content .member-items .member-bio {
     text-align: justify;
-    text-indent: 20px;
+    text-indent: 15px;
     text-shadow: 0.2px 0.2px 3px gray;
-    width: 75%;
+    width: 81%;
     padding-top: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -251,7 +257,7 @@ html{
 
 .content .mem-img{
     width: 154px;
-    border-radius: 90px;
+    border-radius: 50%;
 }
 
 .content .mem-img:hover{
@@ -273,7 +279,7 @@ html{
 .ticket-list .list-board{
     width: 766px;
     max-width: 100%;
-    border-radius: 6px;
+    /* border-radius: 6px; */
 }
 
 .tour-tickets .list-items{
@@ -309,9 +315,9 @@ html{
 
 .tour-places .place-item{
     text-align: left;
-    width: 30.9%;
+    width: 31%;
     margin: 0 9px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 
@@ -324,8 +330,8 @@ html{
 .tour-places .place-img{
     width: 100%;
     display: block;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    /* border-top-right-radius: 20px;
+    border-top-left-radius: 20px; */
 }
 
 .tour-places .place-img:hover{
@@ -365,18 +371,16 @@ html{
     font-size: 17px;
     line-height: 40px;
     border: none;
-    border-radius: 4px;
+    /* border-radius: 4px; */
 }
 
 
 .tour-places .ticket-buybtn:hover{
-    background-color: rgb(179, 143, 101);
+    background-color: rgb(236, 214, 171);
     color: black;
     cursor: pointer;
     transform: scale(1.05, 1.05);
     transition: 0.2s;
-    box-shadow: 0 0 5px #ffee10;
-    text-shadow: 0 0 5px #ffee10;
     /* border-radius: 50px; */
 }
 
@@ -388,7 +392,7 @@ html{
 
 .contact-info .band-information{
     font-size: 20px;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 
 .contact-info .band-information i[class*="ti-"]{
@@ -402,10 +406,10 @@ html{
 
 .contact-form .p1 .user-info,
 .contact-form .p2 .user-info{
-    padding: 8px;
+    padding: 14px 8px;
     border: #ccc solid 1px;
-    border-radius: 8px;
-    font-size: 15px;
+    /* border-radius: 8px; */
+    font-size: 14px;
     margin: 0 8px;
 }
 
@@ -422,20 +426,21 @@ html{
 }
 
 .contact-form .submit-btn{
-    padding: 10px 16px;
+    padding: 14px 16px;
     border: none;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     background-color: black;
-    font-size: 16px;
+    font-size: 12px;
     margin: 4px 1px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
 }
 
 .contact-form .submit-btn:hover{
     color: black;
-    background-color: rgb(179, 143, 101);
+    background-color: rgb(236, 214, 171);
     cursor: pointer;
-        transform: scale(1.1, 1.1);
-        transition: 0.2s;
+    transition: 0.2s;
 }
 
 .ending{
@@ -509,7 +514,7 @@ html{
     min-height: 100px;
     position: relative;
     animation: modalShowup 0.7s;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .modal .ti-close{
@@ -526,8 +531,8 @@ html{
 
 .modal .modal-close:hover{
     transition: 0.2s;
-    background-color: rgb(179, 143, 101);
-    border-radius: 4px;
+    background-color: red;
+    /* border-radius: 4px; */
     cursor: pointer;
 }
 
@@ -539,8 +544,8 @@ html{
     align-items: center;
     font-size: 30px;
     letter-spacing: 3px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
 }
 
 .modal-header .ti-bag{
@@ -566,7 +571,7 @@ html{
     padding: 8px;
     margin-bottom: 24px;
     border: 1px #ccc solid;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     width: 100%;
     font-size: 15px;
 }
@@ -579,12 +584,12 @@ html{
     font-weight: bold;
     background-color: #009688;
     border: none;
-    border-radius: 4px;
+    /* border-radius: 4px; */
 }
 
 .modal-body .modal-btn:hover{
     cursor: pointer;
-    background-color: rgb(179, 143, 101);
+    background-color: rgb(236, 214, 171);
     color: black;
     transition: 0.2s;
 }

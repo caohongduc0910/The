@@ -16,10 +16,6 @@
 
 /* Phone */
 @media (max-width: 739px) {
-
-    .main{
-        overflow: hidden;
-    }
      
     .header{
         overflow: hidden;
@@ -31,6 +27,32 @@
 
     .header .nav li{
         display: block;
+    }
+
+    .nav li a {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+
+    .nav .subnav {
+        /* position: relative; */
+        background-image: linear-gradient(0deg, #0F2027, #203A43, #2C5364);
+    }
+
+    .subnav li a {
+        padding-left: 32px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        color: white important!;   
+    }
+
+    .nav li:hover a {
+        color: white;
+    }
+
+    .subnav li{
+        padding: 4px;
     }
 
     .nav>li:first-child{
@@ -47,23 +69,32 @@
         top: 0;
     }
 
+    .slider .text-content {
+        display: none;
+    }
+
     .content .member-list {
-        padding-left: 32px;
-        padding-right: 32px;
+        padding: 0 32px;
     }  
+
+    .content .mem-img{
+        width: 62%;
+        border-radius: 50%;
+    }
     
     .content .member-items {
         width: 95%;
-        margin-bottom: 32px;
+        margin-bottom: 56px;
     }
 
     .content .member-items .member-bio {
-        width: 70%
+        width: 66%;
+        text-indent: 0;
     }
 
     .tour-places .place-item {
         width: 95%;
-        margin-bottom: 24px;
+        margin-bottom: 40px;
     }
 
     .tour-places .place-content {
@@ -76,6 +107,10 @@
         height: 160px;
     }
 
+    .tour-places .ticket-buybtn {
+        width: 100%;
+    }
+
     .two-col {
         width: 100%;
     }
@@ -83,4 +118,34 @@
     .contact-band-info{
         margin-bottom: 24px;
     }
+
+    .contact-form .p1 .user-info {
+        width: 94%;
+    }
+
+    .row {
+        margin-left: -8px;
+    }
+
+    .contact-form .submit-btn {
+        width: 100%;
+    }
+
+    .contact-form .sbmit {
+        float: initial;
+        margin-top: 4px;
+    }
+
+    .contact-form .p1 .user-info, .contact-form .p2 .user-info {
+        margin-top: 4px;
+    }
+
+    .contact-form .row {
+        margin-bottom: 0;
+    }
+
+    .contact-info .band-information {
+        margin-left: 4px;
+    }
+
 }
