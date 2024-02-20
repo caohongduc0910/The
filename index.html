@@ -354,7 +354,8 @@
             setInterval(function() {
             idx = idx % 3
             // console.log(idx)
-            slider.style.backgroundImage = `url(${path[idx]})`
+            let link = path[idx]
+            slider.style.backgroundImage = `url(${link})`
             textHeading.textContent = textHeader[idx]
             text.textContent = content[idx]
             idx++ 
